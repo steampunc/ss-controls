@@ -1,11 +1,12 @@
 cc_binary(
   name = "state_space",
   deps = ["//third_party/eigen:eigen",
-          ":ss_controller"],
+          ":ss_plant"],
 )
 
 cc_library(
-  name = "ss_controller",
-  hdrs = ["state_space.h"],
-  srcs = ["state_space.hpp"]
+  name = "ss_plant",
+  hdrs = ["state_space_plant.h"],
+  srcs = ["state_space_plant.hpp"],
+  visibility = ["//visibility:public"]
 )
