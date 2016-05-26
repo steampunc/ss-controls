@@ -32,3 +32,4 @@ before_install:
 script:
   - bazel build //control:ss_plant
   - bazel test //tests:plant_test --test_output=all
+  - bazel test //tests:controller_test --test_output=all

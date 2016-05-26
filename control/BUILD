@@ -10,3 +10,10 @@ cc_library(
   srcs = ["state_space_plant.hpp"],
   visibility = ["//visibility:public"]
 )
+
+cc_library(
+  name = "ss_controller",
+  hdrs = ["state_space_controller.h"],
+  srcs = ["state_space_controller.hpp"],
+  visibility = ["//visibility:public"]
+)

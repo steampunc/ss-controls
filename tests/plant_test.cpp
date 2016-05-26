@@ -5,7 +5,7 @@ using namespace muan::control::state_space;
 
 TEST(Plant, doesDiverge) {
   Eigen::Matrix<double, 1, 1> A;
-  A << 2;
+  A << 1.01;
   Eigen::Matrix<double, 1, 1> B;
   B << 0;
   Eigen::Matrix<double, 1, 1> C;
