@@ -14,12 +14,11 @@ TEST(Plant, doesDiverge) {
   Eigen::Matrix<double, 1, 1> X;
   X << 1E-2;
   plant.SetX(X);
-  for (float i; i < 10; i++) {
+  for (float i; i < 10; i += 0.005) {
     Eigen::Matrix<double, 1, 1> U;
     U << 0;
     plant.Update(U);
   }
-
   ASSERT_TRUE(plant.GetX()(0, 0) > 1);
 }
 
@@ -34,7 +33,7 @@ TEST(Plant, doesConverge) {
   Eigen::Matrix<double, 1, 1> X;
   X << 10;
   plant.SetX(X);
-  for (float i; i < 10; i++) {
+  for (float i; i < 10; i += 0.005) {
     Eigen::Matrix<double, 1, 1> U;
     U << 0;
     plant.Update(U);

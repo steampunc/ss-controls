@@ -21,7 +21,7 @@ TEST(Controller, doesDiverge) {
   R << 10;
   plant.SetX(X);
   controller.SetGoal(R);
-  for (float i; i < 10; i++) {
+  for (float i; i < 10; i += 0.005) {
     controller.Update(plant.GetX());
     plant.Update(controller.GetU());
   }
@@ -46,7 +46,7 @@ TEST(Controller, doesConverge) {
   R << 10;
   plant.SetX(X);
   controller.SetGoal(R);
-  for (float i; i < 10; i++) {
+  for (float i; i < 10; i += 0.005) {
     controller.Update(plant.GetX());
     plant.Update(controller.GetU());
   }
