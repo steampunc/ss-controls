@@ -36,4 +36,4 @@ before_install:
 
 script:
   - bazel test --test_output=all -- //tests:plant_test //tests:controller_test
-  - ./check-format.py
+    #  - ./check-format.py
