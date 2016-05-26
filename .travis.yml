@@ -35,5 +35,5 @@ before_install:
   - ./bazel-0.2.1-installer-linux-x86_64.sh --user
 
 script:
-  - bazel test --test_output=all -- //tests:plant_test
+  - bazel test --test_output=all -- //tests:plant_test //tests:controller_test
   - ./check-format.py
