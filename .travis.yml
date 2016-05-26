@@ -30,4 +30,5 @@ before_install:
   - ./bazel-0.2.1-installer-linux-x86_64.sh --user
 
 script:
-  # Put test commands here
+  - bazel build //control:ss_plant
+  - bazel test //tests:plant_test --test_output=all
